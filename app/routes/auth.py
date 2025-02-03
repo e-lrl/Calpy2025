@@ -18,7 +18,7 @@ def login():
         if user and user.check_password(password):
             login_user(user)
             flash("Inicio de sesión exitoso", "success")
-            return redirect(url_for('main.index'))
+            return redirect(url_for('dashboard.dashboard'))
 
         flash("Usuario o contraseña incorrectos", "danger")
 

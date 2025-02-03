@@ -3,23 +3,27 @@
 {% block title %}Iniciar Sesión{% endblock %}
 
 {% block content %}
-<div class="row justify-content-center">
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 75vh;">
     <div class="col-md-4">
-        <div class="card">
-            <div class="card-header text-center">
-                <h3>Iniciar Sesión</h3>
-            </div>
-            <div class="card-body">
+        <div class="card shadow-lg border-0">
+            <div class="card-body p-4">
+                <!-- Logo corporativo -->
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="img-fluid mx-auto d-block mb-3" style="max-width: 150px;">
+                <h3 class="text-center text-dark">Iniciar Sesión</h3>
                 <form method="POST" action="{{ url_for('auth.login') }}">
                     <div class="mb-3">
-                        <label for="username" class="form-label">Usuario</label>
+                        <label for="username" class="form-label text-dark">Usuario</label>
                         <input type="text" class="form-control" name="username" required>
                     </div>
                     <div class="mb-3">
-                        <label for="password" class="form-label">Contraseña</label>
+                        <label for="password" class="form-label text-dark">Contraseña</label>
                         <input type="password" class="form-control" name="password" required>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+                    <button type="submit" class="btn btn-outline-dark text-dark fw-bold w-100"
+                            onmouseover="this.classList.add('text-white', 'bg-dark')"
+                            onmouseout="this.classList.remove('text-white', 'bg-dark')">
+                        Iniciar Sesión
+                    </button>
                 </form>
             </div>
         </div>

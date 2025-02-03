@@ -1,0 +1,2 @@
+2025-02-04 00:54:14 - WARNING -  * Debugger is active!
+2025-02-04 00:54:14 - INFO -  * Debugger PIN: 107-381-308
