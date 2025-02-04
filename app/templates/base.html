@@ -28,6 +28,11 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" href="{{ url_for('dashboard.dashboard') }}">Dashboard</a>
                         </li>
+                        {% if current_user.role == "admin" %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('admin.admin_dashboard') }}">Admin</a>
+                            </li>
+                    {% endif %}
                         <li class="nav-item">
                             <a class="nav-link btn btn-danger text-white" href="{{ url_for('auth.logout') }}">Cerrar Sesión</a>
                         </li>
